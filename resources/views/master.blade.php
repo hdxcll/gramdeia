@@ -7,16 +7,21 @@
         <h2>GRAMEDIA PROJECT</h2>
         @if(Auth::check())
         <nav>
-            <link href="css/topnav.css" rel="stylesheet">
-            <div class="topnav">
-                      <a class="nav-link" href="<?php echo url('/home') ?>">HOME</a></li>
-                      <a class="nav-link" href="<?php echo url('/buku') ?>">DATA BUKU</a></li>
-                      <a class="nav-link" href="<?php echo url('/tentang') ?>">TENTANG</a></li>
-                      <a class="nav-link" href="<?php echo url('/kontak') ?>">KONTAK</a></li>
-                      <a class="nav-link" href="<?php echo url('/logout') ?>">LOGOUT</a></li>
-                      <a class="nav-link" href="#">{{ Auth::user()->name}}</a></li>  
-                  </div>
-                <hr/></nav><br/>
+            <link href="css/tabel.css" rel="stylesheet">
+                
+                        <!--- navigation --->
+                            <!--- logo --->
+                            <a href="#" class="logo">Gramedia</a>
+                            <!--- menu --->
+                            <ul>
+                                <li><a href="home" class="active">Home</a></li>
+                                <li><a href="buku">Data Buku</a></li>
+                                <li><a href="tentang">Tentang</a></li>
+                                <li><a href="kontak">Contact</a></li>
+                                <li><a href="logout">Logout</a></li>
+                            </ul>
+                        </nav>
+                            <hr/></nav><br/>
                   @else
                   @endif
     <h3> @yield('judul_halaman') </h3>
@@ -25,13 +30,5 @@
     <!-- bagian konten blog -->
     @yield('konten')
     
-    <br/>
-    <br/>
-    <hr/>
-    <footer>
-    <p>Modul praktikum pemrograman web lanjut 
-        tahun @include('tahun') </p>
-    </li>
-</footer>
     </body>
     </html>
