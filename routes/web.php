@@ -17,7 +17,7 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', function () { 
     if(Auth::check()){
-        return view('blog/home', ['nama' => 'Hdxcll']);
+        return view('#', ['nama' => 'Hdxcll']);
     }else{
         return view('auth/login');
     }
@@ -46,6 +46,10 @@ Route::get('/tentang', function () {
 });
 Route::get('/ktambah', function () {
     return view('blog/ktambah');
+});
+
+Route::get('/p2', function () {
+    return view('blog/p2');
 });
 Route::get('/buku','App\Http\Controllers\BukuController@index');
 
